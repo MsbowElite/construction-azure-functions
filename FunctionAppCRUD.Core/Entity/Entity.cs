@@ -1,6 +1,4 @@
 ﻿using Microsoft.WindowsAzure.Storage.Table;
-using Newtonsoft.Json;
-using System;
 
 namespace FunctionAppCRUD.Core.Entity
 {

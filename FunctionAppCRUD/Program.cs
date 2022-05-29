@@ -8,7 +8,7 @@ var entityDataStoreOptions =
     new EntityDataStoreOptions();
 
 #if DEBUG
-        entityDataStoreOptions.CloudTableClientPrimary = CloudStorageAccount.DevelopmentStorageAccount.CreateCloudTableClient();
+entityDataStoreOptions.CloudTableClientPrimary = CloudStorageAccount.DevelopmentStorageAccount.CreateCloudTableClient();
 #else
         entityDataStoreOptions.CloudTableClientPrimary = CloudStorageAccount.Parse(Environment.GetEnvironmentVariable("PrimaryConnectionString"))
             .CreateCloudTableClient();

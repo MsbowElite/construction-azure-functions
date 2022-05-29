@@ -1,5 +1,4 @@
 ﻿using FunctionAppCRUD.Core.Entity;
-using System.Text.Json.Serialization;
 
 namespace FunctionAppCRUD.Data.Entities
 {
