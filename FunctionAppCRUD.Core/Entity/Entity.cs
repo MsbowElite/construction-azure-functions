@@ -1,10 +1,6 @@
 ﻿using Microsoft.WindowsAzure.Storage.Table;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FunctionAppCRUD.Core.Entity
 {
@@ -13,14 +9,11 @@ namespace FunctionAppCRUD.Core.Entity
     }
     public abstract class Entity<TKey> : TableEntity, IEntity<TKey>
     {
-        [JsonProperty("id")]
-        public TKey Id { get; set; }
+        public TKey Id { get; set; } = default!;
 
-        [JsonProperty("object")]
-        public string Object { get; set; }
+        public string Object { get; set; } = default!;
 
-        [JsonProperty("createdOn")]
-        public DateTime CreatedOn { get; set; }
+        public DateTime CreatedOn { get; set; } = default!;
 
         protected Entity()
         {

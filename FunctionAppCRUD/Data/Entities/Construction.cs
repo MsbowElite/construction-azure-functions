@@ -9,19 +9,14 @@ namespace FunctionAppCRUD.Data.Entities
     }
     public class Construction : Entity<string>
     {
-        [JsonPropertyName("name")]
         public string Name { get; set; } = default!;
 
-        [JsonPropertyName("description")]
         public string Description { get; set; } = default!;
 
-        [JsonPropertyName("imageUrl")]
         public string ImageUrl { get; set; } = default!;
 
-        [JsonPropertyName("builtAt")]
         public DateTime BuiltAt { get; set; } = default!;
 
-        [JsonPropertyName("cost")]
         public long Cost { get; set; } = default!;
 
         public Construction() : base()

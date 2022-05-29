@@ -10,14 +10,14 @@ namespace FunctionAppCRUD.Data
     public class ConstructionDataStore : EntityDataStore<string, Construction>, IConstructionDataStore
     {
         public ConstructionDataStore(
-            EntityDataStoreOptions entityDataStoreOptions) : base("constructions", entityDataStoreOptions)
+            EntityDataStoreOptions entityDataStoreOptions) : base("Construction", entityDataStoreOptions)
         {
         }
 
         public async Task<IEnumerable<Construction>> ListAsync()
         {
             var query =
-                "Object eq 'construction'";
+                "Object eq 'Construction'";
 
             return await ListAsync(query);
         }
