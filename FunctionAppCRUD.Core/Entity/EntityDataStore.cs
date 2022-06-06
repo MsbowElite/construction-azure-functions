@@ -197,7 +197,7 @@ namespace FunctionAppCRUD.Core.Entity
             try
             {
                 var entityList =
-                    await this.ListAsync(query, _primaryCloudTable);
+                    await ListAsync(query, _primaryCloudTable);
 
                 return entityList;
             }
@@ -206,7 +206,7 @@ namespace FunctionAppCRUD.Core.Entity
                 if (this.AutoFailover)
                 {
                     var entityList =
-                        await this.ListAsync(query, _secondaryCloudTable);
+                        await ListAsync(query, _secondaryCloudTable);
 
                     return entityList;
                 }

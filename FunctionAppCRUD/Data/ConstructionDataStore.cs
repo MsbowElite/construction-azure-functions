@@ -17,9 +17,9 @@ namespace FunctionAppCRUD.Data
         public async Task<IEnumerable<Construction>> ListAsync()
         {
             var query =
-                "Object eq 'Construction'";
+                "Name eq 'test'";
 
-            return await ListAsync(query);
+            return await ListAsync("");
         }
     }
 }
